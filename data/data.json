@@ -1,0 +1,256 @@
+{
+  "exercises": {
+    "1": {
+      "name": "Press banca",
+      "desc": "Empuja la barra hacia arriba trabajando pecho y tríceps.",
+      "img": "bench-press.gif",
+      "equip": ["barra", "banco"],
+      "group": ["pecho", "triceps"]
+    },
+    "2": {
+      "name": "Extensión de tríceps con mancuerna sobre la cabeza",
+      "desc": "Extiende el brazo hacia arriba, trabajando el tríceps.",
+      "img": "dumbbell-triceps-overhead.gif",
+      "equip": ["mancuerna"],
+      "group": ["triceps"]
+    },
+    "3": {
+      "name": "Press banca inclinado con mancuernas",
+      "desc": "Empuja las mancuernas hacia arriba en un banco inclinado.",
+      "img": "dumbbell-incline-press.gif",
+      "equip": ["mancuernas", "banco inclinado"],
+      "group": ["pecho", "triceps"]
+    },
+    "4": {
+      "name": "Extensión de tríceps en polea alta",
+      "desc": "Extiende el brazo hacia abajo, trabajando el tríceps.",
+      "img": "cable-tricep-pushdown.gif",
+      "equip": ["polea", "agarre en V"],
+      "group": ["triceps"]
+    },
+    "5": {
+      "name": "Aperturas con mancuernas en banco plano",
+      "desc": "Abre los brazos hacia los lados, trabajando el pecho.",
+      "img": "dumbbell-chest-fly.gif",
+      "equip": ["mancuernas", "banco"],
+      "group": ["pecho"]
+    },
+    "6": {
+      "name": "Jalón al pecho",
+      "desc": "Jala la barra hacia el pecho, trabajando la espalda.",
+      "img": "",
+      "equip": ["polea", "agarre en barra"],
+      "group": ["espalda", "biceps"]
+    },
+    "7": {
+      "name": "Curl de bíceps en polea baja",
+      "desc": "Flexiona los brazos, trabajando los bíceps.",
+      "img": "",
+      "equip": ["polea", "agarre en barra"],
+      "group": ["biceps"]
+    },
+    "8": {
+      "name": "Remo horizontal en polea baja",
+      "desc": "Jala la barra hacia ti, trabajando la espalda.",
+      "img": "",
+      "equip": ["polea", "agarre en V"],
+      "group": ["espalda", "biceps"]
+    },
+    "9": {
+      "name": "Curl de bíceps con mancuernas",
+      "desc": "Flexiona los brazos con mancuernas, trabajando los bíceps.",
+      "img": "",
+      "equip": ["mancuernas"],
+      "group": ["biceps"]
+    },
+    "10": {
+      "name": "Remo en T con barra",
+      "desc": "Jala la barra hacia ti en posición horizontal, trabajando la espalda.",
+      "img": "",
+      "equip": ["barra"],
+      "group": ["espalda", "biceps"]
+    },
+    "11": {
+      "name": "Prensa de piernas",
+      "desc": "Empuja la plataforma con las piernas, trabajando cuádriceps y glúteos.",
+      "img": "",
+      "equip": ["prensa de piernas"],
+      "group": ["piernas"]
+    },
+    "12": {
+      "name": "Press vertical en máquina",
+      "desc": "Empuja la barra hacia arriba, trabajando los hombros.",
+      "img": "",
+      "equip": ["máquina de press vertical"],
+      "group": ["hombros"]
+    },
+    "13": {
+      "name": "Extensión de cuádriceps en máquina",
+      "desc": "Extiende las piernas hacia arriba, trabajando los cuádriceps.",
+      "img": "",
+      "equip": ["máquina de extensión de cuádriceps"],
+      "group": ["piernas"]
+    },
+    "14": {
+      "name": "Elevaciones laterales con mancuernas",
+      "desc": "Levanta las mancuernas hacia los lados, trabajando los hombros.",
+      "img": "",
+      "equip": ["mancuernas"],
+      "group": ["hombros"]
+    },
+    "15": {
+      "name": "Curl de piernas tumbado",
+      "desc": "Flexiona las piernas hacia arriba, trabajando los isquiotibiales.",
+      "img": "",
+      "equip": ["máquina de curl de piernas"],
+      "group": ["piernas"]
+    },
+    "16": {
+      "name": "Gemelos en prensa de piernas",
+      "desc": "Levanta la plataforma con las puntas de los pies, trabajando los gemelos.",
+      "img": "",
+      "equip": ["prensa de piernas"],
+      "group": ["piernas"]
+    },
+    "17": {
+      "name": "Elevaciones frontales con mancuernas",
+      "desc": "Levanta las mancuernas hacia el frente, trabajando los hombros.",
+      "img": "",
+      "equip": ["mancuernas"],
+      "group": ["hombros"]
+    },
+    "18": {
+      "name": "Encogimientos de hombros con mancuernas",
+      "desc": "Encoge los hombros hacia arriba, trabajando los trapecios.",
+      "img": "",
+      "equip": ["mancuernas"],
+      "group": ["hombros"]
+    },
+    "19": {
+      "name": "Face pull en polea",
+      "desc": "Jala la cuerda hacia tu cara, trabajando los hombros y la espalda.",
+      "img": "",
+      "equip": ["polea", "agarre en cuerda"],
+      "group": ["hombros", "espalda"]
+    },
+    "20": {
+      "name": "Plancha",
+      "desc": "Mantén la posición en el suelo, trabajando abdominales y espalda baja.",
+      "img": "",
+      "equip": ["colchoneta"],
+      "group": ["core"]
+    },
+    "21": {
+      "name": "Abdominales en suelo",
+      "desc": "Flexiona el tronco hacia arriba, trabajando los abdominales.",
+      "img": "",
+      "equip": ["colchoneta"],
+      "group": ["core"]
+    }
+  },
+  "equipment": {
+    "1": {
+      "name": "barra",
+      "desc": "Barra larga y recta para levantamiento de pesas."
+    },
+    "2": {
+      "name": "banco",
+      "desc": "Banco plano para apoyar la espalda durante ejercicios."
+    },
+    "3": {
+      "name": "mancuerna",
+      "desc": "Pesa corta con un asa, utilizada para ejercicios unilaterales."
+    },
+    "4": {
+      "name": "banco inclinado",
+      "desc": "Banco ajustable que se inclina para trabajar diferentes músculos."
+    },
+    "5": {
+      "name": "polea",
+      "desc": "Máquina de cable que permite ajustar la resistencia y altura."
+    },
+    "6": {
+      "name": "banco plano",
+      "desc": "Banco horizontal para apoyar la espalda durante ejercicios."
+    },
+    "7": {
+      "name": "mancuernas",
+      "desc": "Par de pesas cortas con asas, utilizadas para ejercicios bilaterales."
+    },
+    "8": {
+      "name": "colchoneta",
+      "desc": "Superficie acolchada para realizar ejercicios en el suelo."
+    },
+    "9": {
+      "name": "máquina de press vertical",
+      "desc": "Máquina para trabajar los hombros mediante un movimiento de press vertical."
+    },
+    "10": {
+      "name": "máquina de prensa de piernas",
+      "desc": "Máquina para trabajar piernas mediante un movimiento de empuje."
+    },
+    "11": {
+      "name": "máquina de extensión de cuádriceps",
+      "desc": "Máquina para aislar y trabajar los cuádriceps mediante extensión de pierna."
+    },
+    "12": {
+      "name": "máquina de curl de piernas",
+      "desc": "Máquina para aislar y trabajar los isquiotibiales mediante flexión de pierna."
+    },
+    "13": {
+      "name": "agarre en V",
+      "desc": "Agarre en forma de V utilizado en ejercicios de tracción y remo."
+    },
+    "14": {
+      "name": "agarre en barra",
+      "desc": "Agarre en forma de barra recta para ejercicios de tracción y bíceps."
+    },
+    "15": {
+      "name": "agarre en cuerda",
+      "desc": "Agarre en forma de cuerda para ejercicios de tracción y tirón."
+    }
+  },
+  "routines": {
+    "1": {
+      "name": "Pecho y tríceps",
+      "exercises": [
+        { "id": "1", "reps": "8-10", "sets": 4 },
+        { "id": "2", "reps": "10-12", "sets": 4 },
+        { "id": "3", "reps": "8-10", "sets": 4 },
+        { "id": "4", "reps": "10-12", "sets": 4 },
+        { "id": "5", "reps": "10-12", "sets": 3 }
+      ]
+    },
+    "2": {
+      "name": "Espalda y bíceps",
+      "exercises": [
+        { "id": "6", "reps": "8-10", "sets": 4 },
+        { "id": "7", "reps": "10-12", "sets": 4 },
+        { "id": "8", "reps": "8-10", "sets": 4 },
+        { "id": "9", "reps": "10-12", "sets": 4 },
+        { "id": "10", "reps": "8-10", "sets": 3 }
+      ]
+    },
+    "3": {
+      "name": "Pierna y hombros",
+      "exercises": [
+        { "id": "11", "reps": "10-12", "sets": 4 },
+        { "id": "12", "reps": "8-10", "sets": 4 },
+        { "id": "13", "reps": "8-10", "sets": 4 },
+        { "id": "14", "reps": "10-12", "sets": 4 },
+        { "id": "15", "reps": "10-12", "sets": 3 },
+        { "id": "16", "reps": "12-15", "sets": 3 }
+      ]
+    },
+    "4": {
+      "name": "Hombros y ejercicios complementarios",
+      "exercises": [
+        { "id": "17", "reps": "10-12", "sets": 3 },
+        { "id": "18", "reps": "10-12", "sets": 4 },
+        { "id": "19", "reps": "10-12", "sets": 4 },
+        { "id": "20", "reps": "30-60", "sets": 3, "units": "seconds" },
+        { "id": "21", "reps": "15-20", "sets": 3 }
+      ]
+    }
+  }
+}

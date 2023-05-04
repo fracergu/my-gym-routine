@@ -1,28 +1,39 @@
 import styled from "styled-components";
 import { Exercise, RoutineExercise } from "../models/data.model";
 
-const Container = styled.div`
+const Container = styled.div<{ imageUrl: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border: solid 1px #ccc;
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 15px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  background-image: url(${(props) => props.imageUrl});
+  background-size: cover;
+  background-position: center;
+  min-height: 35vh;
+  @media (min-width: 768px) {
+    margin: 2rem;
+  }
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
-  margin: 0;
-  width: 100%;
-  padding: 1rem;
-  background-color: #282c34;
   text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(40, 44, 52, 0.8);
   color: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  width: 100%;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid #282c34;
 `;
 
 const Image = styled.img`
@@ -39,7 +50,7 @@ const Content = styled.div`
   flex-direction: column;
   padding: 1rem;
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
   gap: 2em;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -73,10 +84,10 @@ const WorkoutComponent = ({
   handleSetProgress,
 }: WorkoutComponentProps) => {
   return (
-    <Container>
+    <Container imageUrl={`/img/${exercise.img}`}>
       <Title>{exercise.name}</Title>
       <Content>
-        <Image src={"/img/" + exercise.img} alt={exercise.name} />
+        {/* <Image src={"/img/" + exercise.img} alt={exercise.name} /> */}
         <div>
           <p>
             {routineExercise.sets} sets x {routineExercise.reps} reps

@@ -9,9 +9,7 @@ interface RoutineContextData {
   currentRoutine: string;
   setCurrentRoutine: (id: string) => void;
   updateSetProgress: (exerciseId: string, setsCompleted: number) => void;
-  isRoutineComplete: () => boolean;
   routineProgress: Record<string, number>;
-  isRoutineBlocked: () => boolean;
 }
 
 export const RoutineContext = createContext<RoutineContextData>(
@@ -59,10 +57,6 @@ export const RoutineProvider: React.FC<RoutineProviderProps> = ({
       localStorage.setItem("currentRoutine", JSON.stringify(nextRoutine));
       setRoutineProgress({});
       localStorage.setItem("routineProgress", JSON.stringify({}));
-      localStorage.setItem(
-        "lastCompleted",
-        new Date().toISOString().split("T")[0]
-      );
     }
   }, [currentRoutine, isRoutineComplete, setRoutineProgress]);
 
@@ -78,14 +72,6 @@ export const RoutineProvider: React.FC<RoutineProviderProps> = ({
     localStorage.setItem("routineProgress", JSON.stringify(updatedProgress));
   };
 
-  const isRoutineBlocked = (): boolean => {
-    const lastCompleted = localStorage.getItem("lastCompleted");
-    if (!lastCompleted) return false;
-
-    const today = new Date().toISOString().split("T")[0];
-    return lastCompleted === today;
-  };
-
   return (
     <RoutineContext.Provider
       value={{
@@ -93,9 +79,7 @@ export const RoutineProvider: React.FC<RoutineProviderProps> = ({
         currentRoutine,
         setCurrentRoutine,
         updateSetProgress,
-        isRoutineComplete,
         routineProgress,
-        isRoutineBlocked,
       }}
     >
       {children}

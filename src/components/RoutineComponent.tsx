@@ -7,25 +7,11 @@ interface RoutineComponentProps {
 }
 
 const RoutineComponent = ({ routine }: RoutineComponentProps) => {
-  const {
-    workoutData,
-    updateSetProgress,
-    isRoutineComplete,
-    routineProgress,
-    isRoutineBlocked,
-  } = useRoutine();
+  const { workoutData, updateSetProgress, routineProgress } = useRoutine();
 
   const handleSetProgress = (exerciseId: string, setsCompleted: number) => {
     updateSetProgress(exerciseId, setsCompleted);
   };
-
-  if (isRoutineBlocked()) {
-    return (
-      <div>
-        <h2>You have already completed the routine for today.</h2>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -42,11 +28,6 @@ const RoutineComponent = ({ routine }: RoutineComponentProps) => {
           />
         );
       })}
-      {isRoutineComplete() && (
-        <div>
-          <h3>Congratulations! You have completed the routine.</h3>
-        </div>
-      )}
     </div>
   );
 };

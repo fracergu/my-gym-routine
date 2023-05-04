@@ -38,112 +38,112 @@
     "6": {
       "name": "Jalón al pecho",
       "desc": "Jala la barra hacia el pecho, trabajando la espalda.",
-      "img": "",
+      "img": "wide-grip-lat-pulldown.gif",
       "equip": ["polea", "agarre en barra"],
       "group": ["espalda", "biceps"]
     },
     "7": {
       "name": "Curl de bíceps en polea baja",
       "desc": "Flexiona los brazos, trabajando los bíceps.",
-      "img": "",
+      "img": "biceps-curl-pole.gif",
       "equip": ["polea", "agarre en barra"],
       "group": ["biceps"]
     },
     "8": {
       "name": "Remo horizontal en polea baja",
       "desc": "Jala la barra hacia ti, trabajando la espalda.",
-      "img": "",
+      "img": "low-pulley-row.gif",
       "equip": ["polea", "agarre en V"],
       "group": ["espalda", "biceps"]
     },
     "9": {
       "name": "Curl de bíceps con mancuernas",
       "desc": "Flexiona los brazos con mancuernas, trabajando los bíceps.",
-      "img": "",
+      "img": "biceps-curl-dumbbell.gif",
       "equip": ["mancuernas"],
       "group": ["biceps"]
     },
     "10": {
       "name": "Remo en T con barra",
       "desc": "Jala la barra hacia ti en posición horizontal, trabajando la espalda.",
-      "img": "",
+      "img": "t-bar-row.gif",
       "equip": ["barra"],
       "group": ["espalda", "biceps"]
     },
     "11": {
       "name": "Prensa de piernas",
       "desc": "Empuja la plataforma con las piernas, trabajando cuádriceps y glúteos.",
-      "img": "",
+      "img": "leg-press.gif",
       "equip": ["prensa de piernas"],
       "group": ["piernas"]
     },
     "12": {
       "name": "Press vertical en máquina",
       "desc": "Empuja la barra hacia arriba, trabajando los hombros.",
-      "img": "",
+      "img": "machine-shoulder-press.gif",
       "equip": ["máquina de press vertical"],
       "group": ["hombros"]
     },
     "13": {
       "name": "Extensión de cuádriceps en máquina",
       "desc": "Extiende las piernas hacia arriba, trabajando los cuádriceps.",
-      "img": "",
+      "img": "leg-extensions.gif",
       "equip": ["máquina de extensión de cuádriceps"],
       "group": ["piernas"]
     },
     "14": {
       "name": "Elevaciones laterales con mancuernas",
       "desc": "Levanta las mancuernas hacia los lados, trabajando los hombros.",
-      "img": "",
+      "img": "dumbbell-lateral-raise.gif",
       "equip": ["mancuernas"],
       "group": ["hombros"]
     },
     "15": {
       "name": "Curl de piernas tumbado",
       "desc": "Flexiona las piernas hacia arriba, trabajando los isquiotibiales.",
-      "img": "",
+      "img": "lying-leg-curl.gif",
       "equip": ["máquina de curl de piernas"],
       "group": ["piernas"]
     },
     "16": {
       "name": "Gemelos en prensa de piernas",
       "desc": "Levanta la plataforma con las puntas de los pies, trabajando los gemelos.",
-      "img": "",
+      "img": "leg-press-calf-raise.gif",
       "equip": ["prensa de piernas"],
       "group": ["piernas"]
     },
     "17": {
       "name": "Elevaciones frontales con mancuernas",
       "desc": "Levanta las mancuernas hacia el frente, trabajando los hombros.",
-      "img": "",
+      "img": "dumbbell-front-raise.gif",
       "equip": ["mancuernas"],
       "group": ["hombros"]
     },
     "18": {
       "name": "Encogimientos de hombros con mancuernas",
       "desc": "Encoge los hombros hacia arriba, trabajando los trapecios.",
-      "img": "",
+      "img": "dumbbell-shrug.gif",
       "equip": ["mancuernas"],
       "group": ["hombros"]
     },
     "19": {
       "name": "Face pull en polea",
       "desc": "Jala la cuerda hacia tu cara, trabajando los hombros y la espalda.",
-      "img": "",
+      "img": "face-pull.gif",
       "equip": ["polea", "agarre en cuerda"],
       "group": ["hombros", "espalda"]
     },
     "20": {
       "name": "Plancha",
       "desc": "Mantén la posición en el suelo, trabajando abdominales y espalda baja.",
-      "img": "",
+      "img": "plank.png",
       "equip": ["colchoneta"],
       "group": ["core"]
     },
     "21": {
       "name": "Abdominales en suelo",
       "desc": "Flexiona el tronco hacia arriba, trabajando los abdominales.",
-      "img": "",
+      "img": "crunch.gif",
       "equip": ["colchoneta"],
       "group": ["core"]
     }

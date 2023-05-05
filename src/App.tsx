@@ -8,13 +8,22 @@ const AppHeader = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 2.5vw;
   color: white;
   width: 100%;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   height: 5rem;
   top: 0;
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const AppContent = styled.div`
@@ -37,7 +46,8 @@ function App() {
     routine && (
       <>
         <AppHeader>
-          <h1>{workoutData.routines[currentRoutine].name}</h1>
+          <h1>{"Día " + currentRoutine}</h1>
+          <h2>{workoutData.routines[currentRoutine].name}</h2>
         </AppHeader>
         <AppContent>
           <RoutineComponent routine={routine} />

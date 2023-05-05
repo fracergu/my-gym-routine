@@ -1,6 +1,7 @@
 import { useRoutine } from "../hooks/useRoutine";
 import WorkoutComponent from "./WorkoutComponent";
 import { Routine } from "../models/data.model";
+import { useEffect } from "react";
 
 interface RoutineComponentProps {
   routine: Routine;
@@ -12,6 +13,10 @@ const RoutineComponent = ({ routine }: RoutineComponentProps) => {
   const handleSetProgress = (exerciseId: string, setsCompleted: number) => {
     updateSetProgress(exerciseId, setsCompleted);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [routine]);
 
   return (
     <div>

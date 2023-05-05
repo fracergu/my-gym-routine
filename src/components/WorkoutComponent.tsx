@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Exercise, RoutineExercise } from "../models/data.model";
+import doneIcon from "../../public/vector/done.svg";
 
-const Container = styled.div<{ imageUrl: string }>`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,12 +11,12 @@ const Container = styled.div<{ imageUrl: string }>`
   margin: 1rem;
   border-radius: 15px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-  background-image: url(${(props) => props.imageUrl});
   background-size: cover;
   background-position: center;
-  min-height: 35vh;
+  max-width: 100%;
   @media (min-width: 768px) {
     margin: 2rem;
+    max-width: 550px;
   }
 `;
 
@@ -26,7 +27,7 @@ const Title = styled.h3`
   margin: 0;
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(40, 44, 52, 0.8);
+  background-color: rgba(40, 44, 52, 1);
   color: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -36,38 +37,74 @@ const Title = styled.h3`
   border: 1px solid #282c34;
 `;
 
-const Image = styled.img`
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  @media (min-width: 768px) {
-    width: 50%;
-  }
-`;
-
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  width: 100%;
-  background-color: transparent;
-  gap: 2em;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   @media (min-width: 768px) {
     flex-direction: row;
   }
 `;
 
-const Button = styled.button`
-  background-color: #282c34;
-  color: white;
-  border: none;
+const Image = styled.img`
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: solid 1px #ccc;
+  @media (min-width: 768px) {
+    border-right: solid 1px #ccc;
+    border-bottom: none;
+    border-bottom-left-radius: 15px;
+  }
+`;
+
+const ControlsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  @media (min-width: 768px) {
+    width: 50%;
+    padding: 1rem;
+  }
+`;
+
+const IndicatorContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+`;
+
+const Indicator = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  min-width: 30%;
+  border: solid 1px #ccc;
+  & span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem;
+  }
+`;
+
+const IndicatorTitle = styled.h4<{ completed: boolean }>`
   font-size: 1rem;
-  margin: 0.5rem;
-  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: ${({ completed }) => (completed ? "#1b7c47" : "#282c34")};
+  color: white;
 `;
 
 interface WorkoutComponentProps {
@@ -84,30 +121,34 @@ const WorkoutComponent = ({
   handleSetProgress,
 }: WorkoutComponentProps) => {
   return (
-    <Container imageUrl={`/img/${exercise.img}`}>
+    <Container>
       <Title>{exercise.name}</Title>
       <Content>
-        {/* <Image src={"/img/" + exercise.img} alt={exercise.name} /> */}
-        <div>
-          <p>
-            {routineExercise.sets} sets x {routineExercise.reps} reps
-          </p>
-          <p>
-            {setsCompleted} / {routineExercise.sets} sets completed
-          </p>
-          {/* Progress bar */}
-          <progress value={setsCompleted} max={routineExercise.sets}></progress>
-
-          {setsCompleted < routineExercise.sets && (
-            <Button
+        <Image src={"/img/" + exercise.img} alt={exercise.name} />
+        <ControlsContainer>
+          <IndicatorContainer>
+            <Indicator>
+              <IndicatorTitle completed={false}>Sets</IndicatorTitle>
+              <span>{routineExercise.sets}</span>
+            </Indicator>
+            <Indicator>
+              <IndicatorTitle completed={false}>Reps</IndicatorTitle>
+              <span>{routineExercise.reps}</span>
+            </Indicator>
+            <Indicator
               onClick={() =>
                 handleSetProgress(routineExercise.id, setsCompleted + 1)
               }
             >
-              Complete a set
-            </Button>
-          )}
-        </div>
+              <IndicatorTitle
+                completed={setsCompleted === routineExercise.sets}
+              >
+                <img src={doneIcon} alt="Done" width={"14px"} />
+              </IndicatorTitle>
+              <span>{setsCompleted}</span>
+            </Indicator>
+          </IndicatorContainer>
+        </ControlsContainer>
       </Content>
     </Container>
   );

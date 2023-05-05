@@ -67,9 +67,17 @@ export const RoutineProvider: React.FC<RoutineProviderProps> = ({
   }, [routineProgress, isRoutineComplete, completeRoutine, currentRoutine]);
 
   const updateSetProgress = (exerciseId: string, setsCompleted: number) => {
-    const updatedProgress = { ...routineProgress, [exerciseId]: setsCompleted };
-    setRoutineProgress(updatedProgress);
-    localStorage.setItem("routineProgress", JSON.stringify(updatedProgress));
+    const routine = typedWorkoutData.routines[currentRoutine];
+    const exercise = routine.exercises.find((ex) => ex.id === exerciseId);
+
+    if (exercise && setsCompleted <= exercise.sets) {
+      const updatedProgress = {
+        ...routineProgress,
+        [exerciseId]: setsCompleted,
+      };
+      setRoutineProgress(updatedProgress);
+      localStorage.setItem("routineProgress", JSON.stringify(updatedProgress));
+    }
   };
 
   return (
